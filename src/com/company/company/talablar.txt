@@ -1,0 +1,147 @@
+*** University projectini tuzing ***
+
+University  dasturi universityManager classi orqali boshqariladi.
+
+Talab 1: UniversityManager classi yaratilganda universitet ni nomini qabul qilsin.
+        getUniversityName() metodi universitet nomini return qiladi.
+
+Talab 2: Subject - fan, o'qiladigan fanlar.
+        createSubject() metodi Subject ni quyidagi malumotlarini qabul qiladi:
+            name - nomi
+            semester -  nechi simester o'tilishi ni qabul qiladi.
+        Method subject  ob'ekti return qiladi. Subject name unique bo'lishi kerak.
+        *Agar bor bo'lgan subject qayta yaratilmoqchi bo'lsa null return qiling.
+        Subject classdagi
+            getName() - metodi subject nomini return qiladi.
+            getSemester() - metodi subject nechi semester o'qilishini return qiladi.
+            getId() - metoni yarating va u id ni return qilsin.
+        getSubjectById() metodi Subjectni id sini qabul qiladi va Subject ob'ektini return qiladi.
+        getSubjectByName() metodi Subjectni name sini qabul qiladi va Subjectni ob'ektini return qiladi.
+
+Talab 3: Dean - Dekan.
+        createDean() - metodi dekan qo'shish uchun ishlatiladi.  Metod quyidagi malumotlarni qabul qiladi:
+            name,
+            surname,
+            age,
+            birthDate - tug'lgan kun, String da, (27.09.1982 ko'rinishida),
+            faculty - daken bo'lmoqchi bo'lgan facultet nomi. Masalan: Matematika Fakulteti, Fizika fakulteti
+            salary  - oylik $ da. Ko'katda.
+        Method Dean ob'ektini return qiladi.
+        *Bitta fakultetda bitta dekan bo'lishi mumkin.  Agar bor bo'lgan fakultetdan dekan yaratilmoqchi bo'lsa null return qiling.
+        Dean classdagi:
+            getName() - name ni return qiladi.
+            getSurname() - surname ni return qiladi.
+            getAge() - age ni return qiladi.
+            getBirthDate() - birthDate ni return qiladi.
+            getFaculty() - Fakultetni return qiladi.
+            getSalary() - oylikni return qiladi.
+            getId() - metoni yarating va u id ni return qilsin.
+
+        getDeanByiId() - metodi dean idsini qabul qiladi va tegishli Dean ni return qiladi. Agar id mavjut bo'lmasa null return qilding.
+        getDeanEmployedDateByiId() - metodi  dekanni idsini qabul qiladi va shu dekanni qachon ishga kirganini retn qiladi(employedDate).
+
+Talab 4: Security - oxrana.
+        createSecurity() - metodi security qo'shish uchun ishlatiladi. Metod quyidagi malumotlarni qabul qiladi:
+            name,
+            surname,
+            age,
+            birthDate - tug'lgan kun, String da, (27.09.1982 ko'rinishida),
+            salary  - oylik $ da. Ko'katda.
+            militaryRank - xarbu unvoni (masalan: mayor, kapitan, palkovnik).
+        Security classdagi:
+            getName() - name ni return qiladi.
+            getSurname() - surname ni return qiladi.
+            getAge() - age ni return qiladi.
+            getBirthDate() - birthDate ni return qiladi.
+            getSalary() - oylikni return qiladi.
+            getMilitaryRank() - xarbi unvonni return qiladi return qiladi.
+            getId() - metoni yarating va u id ni return qilsin.
+        Method Security ob'ektini return qiladi.
+        getSecurityListByMilitaryRank() metgod xarbi unvonni qabul qiladi va shu xarbi unvonga ega bo'lgan barcha Security ob'ektlarini return qiladi.
+
+
+Talab 5: Professor - domla, univergadi domlajon.
+        createProfessor() metodi yangi professor qo'shish uchun ishlatiladi. Metod quyidagi qiymatlarni qabul qiladi:
+            name,
+            surname,
+            age,
+            birthDate - tug'lgan kuni String da (27.09.1982 ko'rinishida),
+            subjectId - professot o'tadigan subject Id,
+            salary - oyligi. $ (ko'kat) da.
+        Method Professor ob'ektini return qiladi.
+        Agar mavjut bo'lmagan subjectId kelsa Professor create qilmasdan null return qiling.
+        Professor classdagi:
+            getName() - name ni return qiladi.
+            getSurname() - surname ni return qiladi.
+            getAge() - age ni return qiladi.
+            getBirthDate() - birthDate ni return qiladi.
+            getSalary() - oylikni return qiladi.
+            getSubject() - shu professor o'tadigan subjectni return qiladi.
+            getId() - metoni yarating va u id ni return qilsin.
+        getProfessorById() - metod profeesorni id sini qabul qiladi va tegishli professor ob'ektini return qiladi. Agar id mavjut bo'lmasa null return qilding.
+        getProfessorByNameAndBySurname() - metodi professor ning name va surname ni qabul qiladi va tegishli professor ob'ektini return qiladi.
+        getProfessorListBySubjectId() - metodi subjectId ni qabul qiladi va shu subject dan dars beradigan professorlarni ro'yxatini return qiladi.
+
+Talab 6: Student - bechora student.
+        createStudent()  - metodi student qo'shish uchun ishlatiladi va u quyidagi qiymatlarni qabul qiladi:
+            name,
+            surname,
+            age,
+            birthDate - tug'lgan kun, String da, (27.09.1982 ko'rinishida),
+            level - nechinchi kurs ekanligi
+        Metod Student ob'ektini return qiladi.
+        Student classdagi:
+            getName() - name ni return qiladi.
+            getSurname() - surname ni return qiladi.
+            getAge() - age ni return qiladi.
+            getBirthDate() - birthDate ni return qiladi.
+            getLevel() - o'qidigan kursni return qiladi.
+            getSubjectList() - shu student o'qidigan subjectni return qiladi.
+            getId() - metoni yarating va u id ni return qilsin.
+        addSubjectToStudent() - Metod student ga fanni biriktirish uchun ishlatiladi. Kalla yaniy shu student shu fandan o'qidi deb fanni studentga bo'g'lab qo'yamiz.
+        Metod studentId va subjectId ni qabul qiladi.
+        getStudentById() - metod studentId ni qabul qiladi va tegishli  student ob'ektni return qiladi. Agar id mavjut bo'lmasa null return qilding.
+        getStudentListByLevel() - metod  levelni qabul qiladi va tegishli level da o'qidigan studentlarni ro'yxatini return qiladi.
+        getStudentListBySubjectId() - method subjectId ni return qiladi va shu subject ni o'qidigan studentlarni ro'yxatini return qiladi.
+
+Talab 7:  Exam - imtihon, egzamin
+        Universitetda imtihonlar bo'ladi. imtihonda qaysidir student qaysidir fandan imtihon topshiradi va qandaydir grade (baxo) oladi.
+        Student ni qaysi fandan qanday baxo olganini dasturlda boshqarib ketishimi kerak.
+        createExam()  - metodi exam yaratish uchun ishlatiladi. U qiyidagi parametrlarni qabul qiladi:
+            studentId - Student  id si. Agar shu idli student bo'lmasa null return qiling.
+            subjectId - subject  id si. Agar shu idli student bo'lmasa null return qiling.
+            grade - student olgan baxo. 1,2,3,4,5 -  shular dan bittasi bo'lishi mumkin. Agar bulardan boshqa grade kelsa null return qiling.
+        Shu imtihon qachon bo'lganlini ham xisoblab ketish kerak. createdDate deb olib ktsak bo'ladi.
+        Exam classdagi:
+            getId() - id ni return qiladi.
+            getStudentId() - student ni id sini return qiladi.
+            getSubjectId() - subject ni id sini return qiladi.
+            getStudent() - Student  ob'ektini return qiladi.
+            getSubject() - Subject  ob'ektini return qiladi.
+            getGrade() - Grade ni return qiladi.
+            createdDate() - shu exam qachob return return qiladi.
+            getId() - metoni yarating va u id ni return qilsin.
+        getStudentExamList()  - metod student idsini qabul qiladi va shu student qatnashgan examlarni return qiladi.
+        getStudentListByExamSubjectId() - metodi subject ni idsini qabul qiladi va shu subject dan exam topshirgan studentlarni return qiladi.
+        getStudentListByExamGrate()  - metod subjectId va grade ni qabul qiladi. Metod berilgan Subject dan berilgan grade ni olgan studentlarni return qiladi.
+Talab 8: Event - presentatsiya, qaysidir professor qandaydir tadbir o'tkazadi.
+        createEvent() metodi event yaratish uchun ishlatiladi. Metod Quyidagi malumotlarni qabul qiladi:
+            name - tadbir nomi,
+            professorId - eventni o'tib beradigan professorni idsi. Agar berilgan professorId bo'lmasa null return qiling.
+        Exam classdagi:
+            getId() - id ni return qiladi.
+            getName() - name ni return qiladi.
+            getProfessorId() - professorni id sini return qiladi.
+            getProfessor() - professorni  ob'ektini return qiladi.
+            createdDate() - shu event qachob yaratilganini return qiladi.
+            getId() - metoni yarating va u id ni return qilsin.
+        getEventListByProfessorId() - metodi professorId ni qabul qiladi va shu professor o'tkazgan event larni ro'yxatini return qiladi.
+        Event o'tkazilgan vaqtni ham xisoblab borishimiz kerak. createdDate  deb olib ketsak b'ladi.
+
+Talab 9:
+        getAllEmployeeList() - univerdagi barcha ishchilar ro'yxatini reture qiling.
+        getAllEmployeeListSalary() - univerdagi ishchilar oyligini return qiling.
+
+Happy coding :).
+
+
